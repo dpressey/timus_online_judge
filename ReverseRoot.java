@@ -4,19 +4,11 @@ import java.lang.Math;
 
 public class ReverseRoot {
 	
-	public static void processUserInput(String input){
+	public static void processUserInput(int input){
+			
+		double square_root_result = Math.sqrt(input);
 		
-		String[] split_user_string = input.split(" ");
-		
-		for(int i=0; i < split_user_string.length; i++){
-			// convert each string in the array to a double and print the results
-			
-			int converted_result = Integer.parseInt(split_user_string[i]);
-			
-			double square_root_result = Math.sqrt(converted_result);
-			
-			System.out.println( square_root_result );
-		}
+		System.out.println( square_root_result );
 	}
 	
 	
@@ -26,7 +18,7 @@ public class ReverseRoot {
 		
 		Scanner ui = new Scanner(System.in);
 		System.out.print("Enter any amount of numbers seperated by spaces to find out their square root");
-		String full_user_string = ui.next();
+		int full_user_string = ui.nextInt();
 		processUserInput(full_user_string);
 		
 	}
